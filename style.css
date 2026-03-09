@@ -1,0 +1,95 @@
+:root {
+  --v1: #334155;
+  --v2: #059669;
+  --v3: #10B981;
+  --v4: #34D399;
+  --v5: linear-gradient(135deg, #059669 0%, #10B981 100%);
+  --background1: linear-gradient(135deg, #fff 0%, #e8fdf6 50%, #fff 100%);
+  --background2: #e8fdf6;
+  --background3: linear-gradient(135deg, #DFFFF4 0%, #e8fdf6 50%, #DFFFF4 100%);
+  --font-x: 500 0.875rem/1rem 'Poppins', sans-serif;
+  --font-s: 400 1rem/1.5rem 'Poppins', sans-serif;
+  --font-m: 400 1.125rem/1.5rem 'Poppins', sans-serif;
+  --font-mb: 600 1.125rem/2.25rem 'Poppins', sans-serif;
+  --font-l: 400 1.5rem/2.25rem 'Poppins', sans-serif;
+  --font-xl: 600 2rem/2.5rem 'Poppins', sans-serif;
+  --font-xxl: 600 4rem/4.5rem 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0rem;
+  color: var(--v1);
+  font-family: 'Poppins', sans-serif;
+}
+
+ul, li, a {
+  text-decoration: none;
+  display: inline;
+  padding: 0px;
+}
+
+header {
+  background: var(--background1);
+  display: flex;
+  padding: 0rem 2rem;
+  margin: 0rem 15rem;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+}
+
+header nav ul {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  font: var(--font-x);
+}
+
+.headerlist:hover {
+  transition: .4s;
+  color: var(--v4);
+}
+.headerlist:not(:hover){
+  transition: .4s;
+  color: var(--v1);
+}
+
+#botaoHeader {
+  position: relative;
+  font: var(--font-x);
+  color: var(--v1);
+  cursor: pointer;
+  padding: 0.25rem 1rem 0.25rem .5rem;
+  background-color: var(--v3);
+  border: none;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+#botaoHeader::before {
+  mask-image: url(.//img/DocIcon.svg);
+  mask-size: cover;
+  background-color: var(--v1);
+  content: '';
+  display: inline;
+  width: 2rem;
+  height: 2rem;
+}
+
+#botaoHeader:hover::before {
+  transition: .5s;
+  background-color: #fff;
+}
+
+#botaoHeader:hover {
+  transition: .5s;
+  background-color: var(--v2);
+  color: #ffffff;
+}
+
+#botaoHeader:not(:hover){
+  transition: .5s;
+}
+

@@ -11,7 +11,7 @@
   --font-x: 500 0.875rem/1rem 'Poppins', sans-serif;
   --font-s: 400 1rem/1.5rem 'Poppins', sans-serif;
   --font-m: 500 1.125rem/1.5rem 'Poppins', sans-serif;
-  --font-mb: bold 1.125rem/2.25rem 'Poppins', sans-serif;
+  --font-mb: bold 1.125rem/1.5rem 'Poppins', sans-serif;
   --font-l: 400 1.5rem/2.25rem 'Poppins', sans-serif;
   --font-xl: bold 2rem/2.5rem 'Poppins', sans-serif;
   --font-xxl: bold 4rem/4.5rem 'Poppins', sans-serif;
@@ -213,4 +213,5 @@ header nav ul {
 
 #projetosArticle3 span {
   color: var(--v2);
+
 }

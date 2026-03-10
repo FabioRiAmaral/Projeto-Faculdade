@@ -1,5 +1,6 @@
 :root {
   --v1: #334155;
+  --v1-2: #64748b;
   --v2: #059669;
   --v3: #10B981;
   --v4: #34D399;
@@ -9,11 +10,11 @@
   --background3: linear-gradient(135deg, #DFFFF4 0%, #e8fdf6 50%, #DFFFF4 100%);
   --font-x: 500 0.875rem/1rem 'Poppins', sans-serif;
   --font-s: 400 1rem/1.5rem 'Poppins', sans-serif;
-  --font-m: 400 1.125rem/1.5rem 'Poppins', sans-serif;
-  --font-mb: 600 1.125rem/2.25rem 'Poppins', sans-serif;
+  --font-m: 500 1.125rem/1.5rem 'Poppins', sans-serif;
+  --font-mb: bold 1.125rem/2.25rem 'Poppins', sans-serif;
   --font-l: 400 1.5rem/2.25rem 'Poppins', sans-serif;
-  --font-xl: 600 2rem/2.5rem 'Poppins', sans-serif;
-  --font-xxl: 600 4rem/4.5rem 'Poppins', sans-serif;
+  --font-xl: bold 2rem/2.5rem 'Poppins', sans-serif;
+  --font-xxl: bold 4rem/4.5rem 'Poppins', sans-serif;
 }
 
 body {
@@ -26,6 +27,14 @@ ul, li, a {
   text-decoration: none;
   display: inline;
   padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+}
+
+p {
+  margin: 0rem;
 }
 
 header {
@@ -55,7 +64,6 @@ header nav ul {
 }
 
 #botaoHeader {
-  position: relative;
   font: var(--font-x);
   color: var(--v1);
   cursor: pointer;
@@ -93,3 +101,97 @@ header nav ul {
   transition: .5s;
 }
 
+.projetos {
+  margin-top: 6rem;
+  max-width: 51rem;
+  margin: 6rem 300px 0rem;
+  text-align: center;
+}
+
+.projetos article:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.botaoProjetos {
+  position: relative;
+  font: var(--font-m);
+  color: var(--v2);
+  cursor: pointer;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border: 1px solid var(--v2);
+  border-radius: 0.25rem;
+}
+
+.botaoProjetos:hover {
+  transition: .5s;
+  background-color: var(--v2);
+  color: #ffffff;
+}
+
+.botaoProjetos:not(:hover){
+  transition: .5s;
+}
+
+.projetos article h1 span:nth-child(1){
+  display: block;
+  background-image: var(--v5);
+  color: transparent;
+  background-clip: text;
+}
+
+#article2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0rem 4rem;
+}
+
+#tiposProjetos {
+  display: grid;
+  grid-template-columns: repeat(3, 6.5rem);
+  width: fit-content;
+  gap: 4rem;
+  background-color: #fff; 
+  padding: 1rem 2rem;
+  border: 1px solid var(--v1);
+  border-radius: 1rem;
+  margin: 0rem auto;
+}
+
+#tiposProjetos div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+}
+
+#tiposProjetos div:nth-child(2):after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--v1), transparent);
+  left: -2rem;
+}
+
+#tiposProjetos div:nth-child(3)::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--v1), transparent);
+  left: -2rem;
+}
+
+.spanTiposProjetos {
+  font: var(--font-xl);
+  color: var(--v3);
+}
+
+#tiposProjetos div span:nth-child(2) {
+  font: var(--font-m);
+  color: var(--v1);
+}

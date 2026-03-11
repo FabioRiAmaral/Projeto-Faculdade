@@ -204,6 +204,7 @@ header nav ul {
   padding: 1rem 2rem;
   border: 1px solid #c3c3c3;
   border-radius: 1rem;
+  place-content: center;
 }
 
 #projetosArticle3 p {
@@ -213,5 +214,21 @@ header nav ul {
 
 #projetosArticle3 span {
   color: var(--v2);
+}
 
+#firstDivFooter {
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8rem;
+
+}
+
+#footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#footerLinks img {
+  max-width: 8rem;
 }

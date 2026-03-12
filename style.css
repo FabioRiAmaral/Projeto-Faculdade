@@ -101,6 +101,11 @@ header nav ul {
   transition: .5s;
 }
 
+#main {
+  padding: 1rem 15rem 4rem; 
+  background: var(--background1);
+}
+
 .projetos {
   margin-top: 6rem;
   max-width: 51rem;
@@ -212,23 +217,54 @@ header nav ul {
   color: var(--v1);
 }
 
-#projetosArticle3 span {
+#projetosArticle3 strong {
+  font: var(--font-mb);
   color: var(--v2);
+}
+
+#footer {
+  background: var(--background1); 
+  padding: 8rem 17rem 2rem;
 }
 
 #firstDivFooter {
   display: grid; 
   grid-template-columns: repeat(2, 1fr);
-  gap: 8rem;
-
+  gap: 6rem;
 }
 
-#footerLinks {
+#footerInfo {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-#footerLinks img {
+#footerInfo img {
   max-width: 8rem;
+}
+
+#extraLinks {
+  display: flex;
+  grid-column: 2/5;
+  gap: 6rem;
+}
+
+#navegacaoFooter, #projetosFooter, #relacionadosFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.linkInformativo {
+  font: var(--font-x);
+  color: var(--v1);
+}
+
+.linkInformativo:hover {
+  transition: .5s;
+  color: var(--v3);
+}
+
+.linkInformativo:not(:hover) {
+  transition: .5s;
 }

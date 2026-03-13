@@ -4,30 +4,20 @@
   <meta charset="UTF-8">
   <meta name="description" content="Projetos UEG - Itaberaí">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="./img/UegIcon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="icon" href="./assets/UegIcon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>Portal Projetos UEG</title>
 </head>
 <body>
-  <header class="header">
-    <a href="./index.html" style="display: contents;"><img src="./img/UEGFavicon.svg" alt="Logo UEG"></a>
-    <nav>
-      <ul>
-        <li><a class="headerlist" href="#">Home</a></li>
-        <li><a class="headerlist" href="#footer">Sobre</a></li>
-        <li><a class="headerlist" href="./projetos.html">Projetos</a></li>
-        <li><a class="headerlist" href="https://www.adms.ueg.br" target="_blank" rel="noopener noreferrer">Faculdade</a></li>
-        <li>
-          <a href="https://docs.google.com/document/d/1O52-Gur4E3iQRSIblMvMKapb2iCqeimq4tE7QBq1Jz8/edit?tab=t.0#heading=h.3vad3krym972">           
-            <button id="botaoHeader">Documentos</button>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <header id="header"></header>
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+  </script>
   <main id="main">
     <span style="color: var(--v2); font: var(--font-xl);">Site projetado e programado por Fábio Ribeiro do Amaral Filho</span>
     <section class="projetos">
@@ -60,8 +50,8 @@
       </article>
       <article id="article3">
         <h2>Oportunidades de Projetos de Pesquisa e Extensão</h2>
-        <p>Projeto de extensão é um conjunto estruturado de atividades com caráter educativo, cultural, esportivo, artístico, científico ou
-        tecnológico, desenvolvidas em parceria com a comunidade externa à UEG, com objetivos claros e metodologia definid</p>
+        <p style="color: var(--v1-2);">Projeto de extensão é um conjunto estruturado de atividades com caráter educativo, cultural, esportivo, artístico, científico ou
+        tecnológico, desenvolvidas em parceria com a comunidade externa à UEG, com objetivos claros e metodologia definida.</p>
         <div id="projetosArticle3">
           <div>
             <p>Estimativa de <strong>Carbono</strong> em <strong>Áreas de Restauração</strong> com <strong>IA</strong> e <strong>Sensoriamento Remoto</strong></p>
@@ -79,39 +69,10 @@
       </article>
     </section>
   </main>
-  <footer id='footer'>
-    <div id="firstDivFooter">
-      <div id="footerInfo">
-        <a href="./index.html" style="display: contents;"><img src="./img/UEGFavicon.svg" alt="Logo UEG"></a>
-        <p>Este site apresenta oportunidades de participação em projetos de pesquisa e extensão da UEG, feito de uma forma simples como atividade de estudo ao professor Roberto de Urzêda Paiva.</p>
-        <div style="display: flex; gap: 2rem;">
-          <a href="https://github.com/FabioRiAmaral"><img src="./img/GithubIcon.svg"></a>
-          <a href="https://www.linkedin.com/in/f%C3%A1bio-amaral-550679333/"><img src="./img/LinkedinIcon.svg"></a>
-          <a href="https://www.instagram.com/ueg_itaberai/"><img src="./img/InstaIcon.svg"></a>
-        </div>
-        <p style="margin-top: 2rem;">© 2026 UEG - Campus Cora Coralina. Todos os direitos reservados</p>
-      </div>
-      <div id='extraLinks'>
-        <div id="navegacaoFooter">
-          <h3>Navegação</h3>
-          <a class='linkInformativo' href="./index.html">Home</a>
-          <a class='linkInformativo' href="./index.html">Explorar Projetos</a>
-        </div>
-        <div id="projetosFooter">
-          <h3>Projetos</h3>
-          <a class='linkInformativo' href="./index.html">Estoque de Carbono</a>
-          <a class='linkInformativo' href="./index.html">Monitoramento Ambiental</a>
-          <a class='linkInformativo' href="https://www.ueg.br/mapeando-a-cidade/">Mapeando a Cidade</a>
-          <a class='linkInformativo' href="./index.html">Chatbot LAPIG</a>
-          <a class='linkInformativo' href="https://escola.lapig.iesa.ufg.br/">Plataforma LAPIG</a>
-        </div>
-        <div id="relacionadosFooter">
-          <h3>Relacionados</h3>
-          <a class='linkInformativo' href="https://docs.google.com/document/d/1O52-Gur4E3iQRSIblMvMKapb2iCqeimq4tE7QBq1Jz8/edit?tab=t.0#heading=h.3vad3krym972">Documento Projetos</a>
-          <a class='linkInformativo' href="./index.html">Áreas de interesse p/ projetos</a>
-          <a class='linkInformativo' href="./index.html">Ideias de Projetos</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <footer id='footer'></footer>
+    <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
 </body>
